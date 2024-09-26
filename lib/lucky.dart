@@ -4,12 +4,10 @@ import 'dart:io';
 
 class Lucky {
 late int luckyNumber;
-late int MIN = 10;
-late int MAX = 100;
 
 Lucky() {
-  int min = MIN;
-  int max = MAX;
+var min = int.parse(Platform.environment['MIN'] ?? '0');
+    var max = int.parse(Platform.environment['MAX'] ?? '100');
 
   luckyNumber = Random().nextInt(max - min + 1) + min;
   
